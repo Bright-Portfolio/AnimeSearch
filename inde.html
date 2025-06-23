@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="bg-neutral-800">
+    <header class="header-container flex mt-3 ml-3">
+      <h1 class="font-light text-3xl">
+        <span id="letter1" class="text-blue-400 font-black">Anime</span> search
+        website
+      </h1>
+      <!-- navbar -->
+       <button type="button" id="nav-btn" class=""></button>
+      <form id="searchForm" class="relative -left-10 m-auto">
+        <input
+          class="bg-gray-50/50 active:bg-gray-50/50 p-1 rounded-full text-black outline-none md:w-s lg:w-md"
+          type="text"
+          name="q"
+          />
+          <button
+            class="hover:bg-gray-500 mr-5 py-1 px-2 rounded-full border-1 font-light" type="submit" id="search"
+          > 
+          <span class="relative bottom-0.5">search</span>
+          </button>
+        <label for="limitDropDown">filter
+        <select class="mr-5 font-light rounded-sm" name="limit" id="limitDropDown">
+          <option class="bg-neutral-800 font-light" value="all" id="all">
+            all
+          </option>
+          <option class="bg-neutral-800 font-light" value="10">10</option>
+          <option class="bg-neutral-800 font-light" value="20">20</option>
+        </select>
+      </form>
+      </label>
+      <!-- navbar end -->
+    </header>
+    <div
+      class="res-container grid sm:grid-cols-3 md:grid-cols-7 grid-flow-row gap-4 place-items-center mt-10 ml-2"
+    ></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+<!-- ทำให้เมื่อขนาดหน้าจอ sm แล้วปุ่มเบอเกอร์โผล่มา -->
+ <!-- ทำให้ขนาดภาพปรับตามขนาดหน้าจอที่เปลี่ยนไปอย่างเหมาะสม -->
+  <!-- ลองขยับ search box to be more center -->
