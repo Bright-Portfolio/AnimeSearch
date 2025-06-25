@@ -15,38 +15,117 @@
         website
       </h1>
       <!-- navbar -->
-       <button type="button" id="nav-btn" class="cursor-pointer absolute right-5 top-2 md:hidden">
-         <svg height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#f0f8ff;} </style> <g> <path class="st0" d="M312.069,53.445c-71.26-71.26-187.194-71.26-258.454,0c-71.261,71.26-71.261,187.206,0,258.466 c71.26,71.26,187.194,71.26,258.454,0S383.329,124.705,312.069,53.445z M286.694,286.536 c-57.351,57.34-150.353,57.34-207.704-0.011s-57.351-150.353,0-207.693c57.351-57.351,150.342-57.351,207.693,0 S344.045,229.174,286.694,286.536z"></path> <path class="st0" d="M101.911,112.531c-29.357,37.725-31.801,89.631-7.321,129.702c1.877,3.087,5.902,4.048,8.978,2.182 c3.065-1.888,4.037-5.903,2.16-8.978c-21.666-35.456-19.506-81.538,6.469-114.876c2.226-2.837,1.713-6.938-1.135-9.154 C108.227,109.193,104.125,109.695,101.911,112.531z"></path> <path class="st0" d="M498.544,447.722l-132.637-129.2c-7.255-7.07-18.84-6.982-26.008,0.174l-21.033,21.033 c-7.156,7.156-7.234,18.742-0.153,25.986l129.19,132.636c14.346,17.324,35.542,18.35,51.917,1.964 C516.216,483.951,515.857,462.068,498.544,447.722z"></path> </g> </g></svg>
-       </button>
-      <form id="searchForm" class="relative z-1 hidden md:flex justify-around -left-10 m-auto ">
+      <button
+        type="button"
+        id="search-btn2"
+        class="cursor-pointer absolute right-5 top-2 md:hidden"
+      >
+        <svg
+          height="24px"
+          width="24px"
+          version="1.1"
+          id="_x32_"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+          fill="#000000"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <style type="text/css">
+              .st0 {
+                fill: #f0f8ff;
+              }
+            </style>
+            <g>
+              <path
+                class="st0"
+                d="M312.069,53.445c-71.26-71.26-187.194-71.26-258.454,0c-71.261,71.26-71.261,187.206,0,258.466 c71.26,71.26,187.194,71.26,258.454,0S383.329,124.705,312.069,53.445z M286.694,286.536 c-57.351,57.34-150.353,57.34-207.704-0.011s-57.351-150.353,0-207.693c57.351-57.351,150.342-57.351,207.693,0 S344.045,229.174,286.694,286.536z"
+              ></path>
+              <path
+                class="st0"
+                d="M101.911,112.531c-29.357,37.725-31.801,89.631-7.321,129.702c1.877,3.087,5.902,4.048,8.978,2.182 c3.065-1.888,4.037-5.903,2.16-8.978c-21.666-35.456-19.506-81.538,6.469-114.876c2.226-2.837,1.713-6.938-1.135-9.154 C108.227,109.193,104.125,109.695,101.911,112.531z"
+              ></path>
+              <path
+                class="st0"
+                d="M498.544,447.722l-132.637-129.2c-7.255-7.07-18.84-6.982-26.008,0.174l-21.033,21.033 c-7.156,7.156-7.234,18.742-0.153,25.986l129.19,132.636c14.346,17.324,35.542,18.35,51.917,1.964 C516.216,483.951,515.857,462.068,498.544,447.722z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <form
+        id="searchForm"
+        class="hidden md:flex justify-between -left-10 m-auto"
+      >
         <input
-          class="bg-gray-50/50 active:bg-gray-50/50 p-1 rounded-full text-black outline-none md:w-s lg:w-md"
+          id="input1"
+          class="bg-gray-50/70 active:bg-gray-70/5 mr-2 px-3 rounded-full text-black outline-none md:w-s lg:w-md"
           type="text"
           name="q"
-          />
-          <button
-            class="hover:bg-gray-500 absolute z-0 right-10 mr-5 py-1 px-2 rounded-full border-1 font-light" type="submit" id="search"
-          > 
+        />
+        <button
+          class="hover:bg-gray-500 bg-neutral-800 mr-5 py-1 px-2 rounded-full border-1 font-light"
+          type="submit"
+          id="search"
+        >
           <span class="relative bottom-0.5">search</span>
-          </button>
-        <label for="limitDropDown">filter
-        <select class="mr-5 font-light rounded-sm" name="limit" id="limitDropDown">
-          <option class="bg-neutral-800 font-light" value="all" id="all">
-            all
-          </option>
-          <option class="bg-neutral-800 font-light" value="10">10</option>
-          <option class="bg-neutral-800 font-light" value="20">20</option>
-        </select>
+        </button>
+        <div class="dropdown-container">
+          <label for="dropdown-button1">Display :</label>
+          <select name="limit" class="cursor-pointer" id="dropdown-button1">
+            <option class="bg-neutral-800 font-light" value="all" id="all">
+              all
+            </option>
+            <option class="bg-neutral-800 font-light" value="10">10</option>
+            <option class="bg-neutral-800 font-light" value="20">20</option>
+          </select>
+        </div>
       </form>
-      </label>
-      <!-- navbar end -->
     </header>
+    <!-- navbar end -->
+    <!-- search on small screen -->
     <div
-      class="res-container grid sm:grid-cols-3 md:grid-cols-7 grid-flow-row gap-4 place-items-center mt-10 ml-2"
+      id="search-container2"
+      class="hidden md:hidden relative flex justify-center border-1 rounded-sm p-10 mx-auto mt-15 w-130"
+    >
+      <form id="searchForm-2" class="m-auto">
+        <input
+          id="input2"
+          class="bg-gray-50/70 active:bg-gray-70/5 mr-2 px-3 py-1 rounded-full text-black outline-none"
+          type="text"
+          name="q"
+        />
+        <button
+          class="hover:bg-gray-500 bg-neutral-800 py-1 px-2 rounded-full border-1 font-light"
+          type="submit"
+          id="search2"
+        >
+          <span class="relative bottom-0.5">search</span>
+        </button>
+        <div class="dropdown-container">
+          <label for="dropdown-button2"
+            >Display :
+            <select name="limit" class="cursor-pointer" id="dropdown-button2">
+              <option class="bg-neutral-800 font-light" value="all" id="all2">
+                all
+              </option>
+              <option class="bg-neutral-800 font-light" value="10">10</option>
+              <option class="bg-neutral-800 font-light" value="20">20</option>
+            </select>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div
+      class="res-container grid sm:grid-cols-4 md:grid-cols-7 grid-flow-row gap-4 place-items-center mt-10 ml-2"
     ></div>
     <script src="./index.js"></script>
   </body>
 </html>
-<!-- ทำให้เมื่อขนาดหน้าจอ sm แล้วปุ่มเบอเกอร์โผล่มา -->
- <!-- ทำให้ขนาดภาพปรับตามขนาดหน้าจอที่เปลี่ยนไปอย่างเหมาะสม -->
-  <!-- ลองขยับ search box to be more center -->
